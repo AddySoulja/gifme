@@ -1,4 +1,4 @@
-const url = "http://api.giphy.com/v1/gifs/search?";
+const url = "https://api.giphy.com/v1/gifs/search?";
 const api_key = "GlVGYHkr3WSBnllca54iNt0yFbjz7L65";
 
 export async function fetchGifs(keyword, offset) {
