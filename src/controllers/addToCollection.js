@@ -1,5 +1,5 @@
 import { addDoc } from "firebase/firestore";
-import { favCollectionRef } from "../firebase/firebaseConfig";
+// import { favCollectionRef } from "../firebase/firebaseConfig";
 export default async function addGif(gif) {
   let response = null,
     error = null;

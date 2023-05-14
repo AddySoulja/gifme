@@ -1,22 +1,22 @@
 import { Gif } from "@giphy/react-components";
 import Image from "next/image";
 import star from "../../public/images/star.svg";
-import addGif from "../controllers/addToCollection";
+// import addGif from "../controllers/addToCollection";
 
 export default function GifCard({ gif }) {
   //feature for favorites of the user is stillin progress
-  const handleAdd = async () => {
-    let response = null,
-      error = null;
-    try {
-      response = await addGif(gif);
-    } catch (e) {
-      error = e;
-    }
-    if (!error) {
-      alert("Added to favorites");
-    }
-  };
+  // const handleAdd = async () => {
+  //   let response = null,
+  //     error = null;
+  //   try {
+  //     response = await addGif(gif);
+  //   } catch (e) {
+  //     error = e;
+  //   }
+  //   if (!error) {
+  //     alert("Added to favorites");
+  //   }
+  // };
   return (
     <>
       <div className="gifCard">
