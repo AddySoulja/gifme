@@ -365,9 +365,11 @@
   width: 100vw;
   padding: 50px;
   height: auto;
+  display: flex;
 }
 
 .fav-heading {
+  height: 30px;
   font-size: 20px;
   font-weight: 1000;
   border-bottom: 2px solid black;
@@ -380,4 +382,8 @@
   font-weight: 1200;
   font-style: italic;
   margin-right: 30%;
+}
+
+#homeBtn {
+  margin-left: auto;
 }
