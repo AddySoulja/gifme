@@ -1,7 +1,22 @@
 import { Gif } from "@giphy/react-components";
 import Image from "next/image";
 import star from "../../public/images/star.svg";
+import addGif from "../controllers/addToCollection";
+
 export default function GifCard({ gif }) {
+  //feature for favorites of the user is stillin progress
+  const handleAdd = async () => {
+    let response = null,
+      error = null;
+    try {
+      response = await addGif(gif);
+    } catch (e) {
+      error = e;
+    }
+    if (!error) {
+      alert("Added to favorites");
+    }
+  };
   return (
     <>
       <div className="gifCard">
@@ -12,7 +27,7 @@ export default function GifCard({ gif }) {
             className="star"
             src={star}
             alt="favorites"
-            onClick={() => addData("favorites", Math.random() * 13, { ...gif })}
+            // onClick={handleAdd}
           />
         </div>
         {gif.username ? <div className="gifAuthor">@{gif.username}</div> : ""}

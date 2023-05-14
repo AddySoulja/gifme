@@ -29,6 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/search/useDebounce.jsx"
-, "src/context/AuthContext.jsx", "src/context/AuthContext.jsx", "app/page.jsx"  ],
+, "src/context/AuthContext.jsx", "src/context/AuthContext.jsx", "app/page.jsx", "app/dashboard/StoreContext.jsx", "app/dashboard/navbar/NavBar.jsx"  ],
   "exclude": ["node_modules"]
 }

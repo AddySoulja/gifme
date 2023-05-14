@@ -9,12 +9,12 @@ export default function Home() {
   const user = getAuth(app).currentUser;
   const router = useRouter();
   useEffect(() => {
-    if (user === null) router.push("/log-in")
+    if (user === null) return router.push("/log-in")
   }, [user, router])
 
   return (
     <main className="main">
-      <Dashboard />
+      <Dashboard user={user} />
     </main>
   )
 }

@@ -5,7 +5,9 @@ import useDebounce from "../../../src/hooks/useDebounce";
 import { fetchGifs } from "../../../src/controllers/fetchGifs";
 import searchIcon from "../../../public/images/searchIcon.svg";
 
-export default function Search({ setData, setIsLoading, offset }: { setData: Function, setIsLoading: Function, offset: number }) {
+type SearchProps = { setData: Function, setIsLoading: Function, offset: number };
+
+export default function Search({ setData, setIsLoading, offset }: SearchProps) {
   const [search, setSearch] = useState("");
   const debouncedSearch = useDebounce(search, 500);
 

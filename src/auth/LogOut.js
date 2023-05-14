@@ -1,9 +1,7 @@
-import app from "../firebase/firebaseConfig";
 import { getAuth, signOut } from "firebase/auth";
 
-const auth = getAuth(app);
-
 export default async function logOut() {
+  const auth = getAuth();
   let response = null,
     error = null;
   try {

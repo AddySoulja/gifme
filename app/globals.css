@@ -193,7 +193,16 @@
     margin-right: 15px;
     margin-top: 6px;
   }
+  
+  .star:hover {
+    cursor: pointer;
+    height: 39px;
+    width: 39px;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 6px;
 
+  }
   .gifAuthor {
       width: 154px;
       height: 20px;

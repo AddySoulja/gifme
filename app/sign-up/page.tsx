@@ -22,7 +22,9 @@ function Page() {
         <div className="wrapper">
             <div className="form-wrapper">
                 <h1 className="mt-10">Create a new account</h1>
-                <form onSubmit={(e) => handleForm(e)} className="form">
+                <form
+                    onSubmit={(e) => handleForm(e)}
+                    className="form">
                     <label htmlFor="displayName">
                         <p>Username</p>
                         <input value={username} onChange={(e) => setUsername(e.target.value)} required type="text" name="username" id="username" placeholder="Username" />

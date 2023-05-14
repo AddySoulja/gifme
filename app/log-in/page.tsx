@@ -11,18 +11,19 @@ function Page() {
 
     const handleForm = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        const { response, error } = await signIn(email, password);
+        const { error } = await signIn(email, password);
 
         if (error) {
             return alert(error)
         }
-        console.log("LOgin resp: ", response)
         return router.push("/")
     }
     return (<div className="wrapper">
         <div className="form-wrapper">
             <h1 className="mt-10">Log In to your account</h1>
-            <form onSubmit={handleForm} className="form">
+            <form
+                onSubmit={handleForm}
+                className="form">
                 <label htmlFor="email">
                     <p>Email</p>
                     <input onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="Enter your email..." />
