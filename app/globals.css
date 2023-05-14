@@ -373,3 +373,11 @@
   border-bottom: 2px solid black;
 }
 
+
+.logo {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 1200;
+  font-style: italic;
+  margin-right: 30%;
+}

@@ -20,6 +20,7 @@ export default function Home() {
     <main className="main">
       <div className="navbar">
         <span className="email">{displayName !== "" ? displayName : ""}</span>
+        <span className="logo">Gifme <code>by Aditya Kumar</code></span>
         <Link href="/favorites" className="navBtn">
           Favorites
         </Link>
