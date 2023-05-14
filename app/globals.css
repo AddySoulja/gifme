@@ -16,12 +16,351 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.main {
+  display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+    background: #E8EAEE;
+  }
+  .link {
+    text-decoration: underline;
+  }
+  
+  
+  .wrapper {
+    display: flex;
+      width: 100vw;
+      height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #E8EAEE;
+  }
+  
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 600px;
+    align-items: center;
 }
+
+.form {
+  margin: 20px 0px;
+}
+.form-btn {
+  height: 4px;
+  margin-left: auto;
+  padding: 16px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #FFFFFF;
+
+  /* Black */
+
+  background: #000000;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.searchbar {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  gap: 20px;
+  position: absolute;
+  width: 1136px;
+  height: 122px;
+  left: calc(50% - 1136px/2 + 0px);
+  top: 72px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+.inputField {
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 10px;
+  
+    width: 888px;
+    height: 57px;
+  
+    /* Input field background */
+  
+    background: #F2F4F8;
+    border-radius: 12px;
+  
+    /* Inside auto layout */
+
+}
+.loader {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgb(208, 202, 202);
+  border-right: 16px solid rgb(208, 202, 202);
+
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.results {
+  position: absolute;
+  display: flex;
+  width: 1136px;
+  height: 475px;
+  left: calc(50% - 1136px/2 + 0px);  top: 194px;
+  top: 177px;
+  justify-content: space-evenly;
+  /* White */
+  padding: 14px 52px;
+  background: #FFFFFF;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.gifCard {
+  width: 330px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+
+.gifImage {
+  min-height: 236px;
+  max-width: 354px;
+  max-height: 236px;
+  border-radius: 32px;
+}
+
+
+.gifTitle {
+  width: auto;
+  height: 30px;
+  display: flex;
+
+    /* Title */
+    
+    font-family: 'Apercu Pro';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 125% */
+    
+    
+    /* Black */
+    
+    color: #000000;
+  }
+
+  .star {
+    height: 35px;
+    width: 35px;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 6px;
+  }
+
+  .gifAuthor {
+      width: 154px;
+      height: 20px;
+    
+      /* Details 16/20 */
+    
+      font-family: 'Apercu Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height, or 125% */
+    
+    
+      /* Secondary gray */
+    
+      color: #999FAA;
+  }
+
+  .email {
+      color: white;
+      margin: 0px auto 0px 30px;
+  }
+  .navBtn {
+    display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      gap: 10px;
+      background: #FFFFFF;
+      width: 100px;
+      max-height: 8px;
+    margin-right: 30px;
+      /* Black */
+    
+      color: #000000;
+      border-radius: 12px;
+    
+  }
+
+  .btn {
+    /* Button */
+    
+    
+      /* Auto layout */
+    
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      gap: 10px;
+      color: #FFFFFF;
+      width: 110px;
+      height: 74px;
+    
+      /* Black */
+    
+      background: #000000;
+      border-radius: 12px;
+    
+      /* Inside auto layout */
+    
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+  }
+
+.pagination {
+/* Interactive Pagination */
+
+
+  position: absolute;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 13px;
+  width: 270px;
+  height: 45px;
+  left: 42%;
+  top: 80%;
+}
+
+.pageBtn {
+  width: 68px;
+    height: 16px;
+  
+    /* Numbers */
+  
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    justify-content: center;
+    align-items: center;
+    
+    /* not black */
+    color: #272727;
+  }
+  .pageBtnDisabled {
+    width: 68px;
+      height: 16px;
+    
+      /* Numbers */
+    
+      font-family: 'IBM Plex Mono';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 16px;
+      /* identical to box height, or 114% */
+      justify-content: center;
+      align-items: center;
+      
+      /* not black */
+      color: #27272783;
+    
+  }
+  .numBtn, .numBtnActive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+    gap: 10px;
+    
+    color: #272727;
+    width: 25px;
+    height: 32px;
+  }
+  
+  .numBtnActive {
+  background-color: #eb518f6c;
+    border-bottom: 2px solid #EB518F;
+}
+
+.numBtn:hover, .numBtnActive:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 6vh;
+  background-color: #000000;
+}
+
+
+.fav {
+  width: 100vw;
+  padding: 50px;
+  height: auto;
+}
+
+.fav-heading {
+  font-size: 20px;
+  font-weight: 1000;
+  border-bottom: 2px solid black;
+}
+
