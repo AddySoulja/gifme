@@ -4,7 +4,7 @@ export default async function addGif(gif) {
   let response = null,
     error = null;
   try {
-    response = await favCollectionRef;
+    // response = await favCollectionRef;
   } catch (e) {
     error = e;
   }

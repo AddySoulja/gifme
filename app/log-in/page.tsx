@@ -35,7 +35,7 @@ function Page() {
                 <button type="submit" className="form-btn">Log In</button>
             </form>
             <p>
-                Don't have an account ? <Link className="link" href="/sign-up">Sign Up here.</Link>
+                Don&apos;t have an account ? <Link className="link" href="/sign-up">Sign Up here.</Link>
             </p>
         </div>
 
